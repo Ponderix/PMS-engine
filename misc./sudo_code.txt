@@ -1,0 +1,24 @@
+Code to check amount of paths filled.
+
+
+How the code works:
+
+Create draggable div with header named "District Counter" classify with correct classes; create a dynamic list
+where you can add elements through a "+" button.
+When the plus is clicked new element appears with a new colourpicker and hex input and a name input for each;
+Dynamic variable for: {
+  hex value
+  colour value
+}
+A dynamic variable is created for every colour selected through a loop (focus on [i]).
+The variable for each path is paired with the value of the colour it is filled in (colour value).
+A loop function checks which variables are filled with which colour and counts it.
+The number for the amount of districts filled in with a colour is inserted into the inner html next to the dynamic list.
+
+1. find out how to create a dynamic list ON the draggable div
+2. find out how to make the colourpicker appear on every element and how to create the dynamic variables for each to works
+3. create dynamic variables for each path
+4. find out how to pair the path variable and the colour it is filled in with 
+5. create the loop counter which checks which paths are filled with what colour
+(doesnt check the XML paths but the javascript variables)
+6. Insert this value into the html

@@ -1,0 +1,230 @@
+html {
+  overflow:hidden;
+}
+
+body {
+  background-color: #383c4f;
+  font-family: Tahoma, sans-serif;
+}
+
+header {
+  width: 100%;
+  height: 60px;
+  color: #000000;
+  background-color: #ffffff;
+  margin-top: 5px;
+}
+
+header h2 {
+  color: #000;
+  letter-spacing: 2px;
+  font-size: 1.9em;
+  font-weight: 400;
+  position: relative;
+  display: block;
+  padding-left: 50px;
+  padding-top: 10px;
+  margin-left: 20px;
+}
+
+br {
+  display: block;
+  content: "";
+  margin-top: 10px;
+}
+
+path {
+  fill: #a6a6a6;
+  transition: 0.15s fill;
+  position: relative;
+  z-index: -3;
+}
+path:hover {fill: #cccccc;}
+
+input[type=color] {
+  border: none;
+  cursor: pointer;
+  background: none;
+}
+
+input {
+  padding: none;
+}
+
+.heading_class {
+  text-align: center;
+  font-family: sans-serif;
+}
+
+.background {
+  fill: none;
+  pointer-events: all;
+}
+
+.closebox {
+  float: right;
+  width: 10px;
+  height: 10px;
+  color: white;
+  bottom: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.draggable_main {
+  padding-top: 7px;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-bottom: 5px;
+  cursor: default;
+}
+
+  .draggable_main_pc {
+    padding-top: 7px;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-bottom: 5px;
+    cursor: default;
+  }
+
+.draggable_header {
+  padding: 10px;
+  cursor: move;
+  z-index: 10;
+  background-color: #c74040;
+  color: white;
+  cursor: pointer;
+}
+
+  .draggable_header_pc {
+    padding: 10px;
+    cursor: move;
+    z-index: 10;
+    background-color: #2d5ead;
+    color: white;
+    cursor: default;
+    font-weight: bold;
+    text-align: center;
+  }
+
+.draggable_box_btn {
+  border-radius: 0px;
+  background-clip: padding-box;
+  background-color: #203040;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  padding: 5px 12px;
+  font-size: 12px;
+  background: green;
+}
+
+#newPartyBtn {
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#list{
+  -moz-user-select:none;
+}
+
+#add-btn {
+  background-color: #c74040;
+  color: white;
+  cursor: pointer;
+  padding: 5px 12px;
+  font-size: 12px;
+  border: none;
+  margin-top: 5px;
+}
+
+#colour_picker_btn {
+  position: fixed;
+  bottom: 0;
+}
+
+#const_name_btn {
+  position: fixed;
+  bottom: 0;
+  left: 112px;
+}
+
+#party_creator_btn {
+  position: fixed;
+  bottom: 0;
+  left: 257.5px;
+}
+
+#resetmap {
+  position: fixed;
+  background-color: #c74040;
+  color: white;
+  cursor: pointer;
+  padding: 5px 12px;
+  font-size: 12px;
+  border: none;
+  margin-top: 7px;
+}
+
+#help {
+  left: 69px;
+  position: fixed;
+  background-color: #c74040;
+  color: white;
+  cursor: pointer;
+  padding: 5px 12px;
+  font-size: 12px;
+  border: none;
+  margin-top: 7px;
+}
+
+#help_box {
+  display: none;
+  width: 400px;
+  position: absolute;
+  top: 92px;
+  left: 124px;
+  z-index: 9;
+  background-color: #f1f1f1;
+  text-align: left;
+  cursor: pointer;
+}
+
+#colorpicker_box {
+  width: 230px;
+  position: absolute;
+  top: 92px;
+  left: 880px;
+  z-index: 9;
+  background-color: #f1f1f1;
+  text-align: left;
+  cursor: pointer;
+}
+
+#hex {
+  cursor:pointer;
+}
+
+#constituency_title_box {
+  width: 230px;
+  position: absolute;
+  top: 181px;
+  left: 880px;
+  z-index: 9;
+  background-color: #f1f1f1;
+  text-align: left;
+  cursor: pointer;
+}
+
+#party_creator_box {
+  width: 230px;
+  position: absolute;
+  top: 92px;
+  left: 620px;
+  z-index: 9;
+  background-color: #f1f1f1;
+  text-align: left;
+  cursor: pointer;
+}
