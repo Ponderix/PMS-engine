@@ -5,8 +5,7 @@
     <meta charset="utf-8">
     <title>Adorian National Assembly (FPTP)</title>
 
-    <script src="./libraries/d3.min.js"></script>
-    <script src="./libraries/svg-pan-zoom.min.js"></script>
+    <script src="libraries/d3.min.js"></script>
   </head>
 
   <body>
@@ -18,7 +17,7 @@
     <button id="help" onclick="helpButton()">Help</button>
     <button id="colour_picker_btn" class="draggable_box_btn" onclick="cpckBtn()">Colour Picker</button>
     <button id="const_name_btn" class="draggable_box_btn" onclick="cnBtn()">Constituency Names</button>
-    <button id="party_creator_btn" class="draggable_box_btn" onclick="pcBtn()">Party Creator</button>
+    <button id="party_results_btn" class="draggable_box_btn" onclick="resBtn()">Party Creator</button>
 
     <div id="help_box">
       <div class="draggable_header">
@@ -61,13 +60,13 @@
       </div>
     </div>
 
-    <div id="party_creator_box">
-      <div class="draggable_header_pc">
-        Create Parties
-        <div class="closebox" onclick="pcBtn()"></div>
+    <div id="party_results_box">
+      <div class="draggable_header_res">
+        Results
+        <div class="closebox" onclick="resBtn()">X</div>
       </div>
-      <div id="list" class="draggable_main_pc">
-        <div id="newPartyBtn">+</div>
+      <div id="list" class="draggable_main_res">
+        aa
       </div>
     </div>
 
@@ -408,9 +407,9 @@
       </svg>
     </div>
 
-    <link rel="stylesheet" href="./css/styles.css"/>
-    <script type="text/javascript" src="./javascript/script.js"></script>
-    <script type="text/javascript" src="./javascript/window_functions.js"></script>
+    <link rel="stylesheet" href="css/styles.css"/>
+    <script type="text/javascript" src="javascript/script.js"></script>
+    <script type="text/javascript" src="javascript/window_functions.js"></script>
   </body>
 
 </html>
