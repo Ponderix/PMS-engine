@@ -1,3 +1,14 @@
+var paths = document.getElementsByTagName("path")
+console.log(paths.length)
+
+d3.selectAll("path")
+  .style("fill", "#a6a6a6");
+
+//dynamic variables for districts
+d3.selectAll("path")
+  .attr("id", (p, i) =>{
+    return "path" + (i + 1);
+  });
 
 //fill paths with colour selected
 var colorInput = document.querySelector("#color")
@@ -9,7 +20,21 @@ colorInput.addEventListener("input", () =>{
 })
 
 function pathclick(event) {
-  /*(event.target).style.fill = (colorInput.value)*/
+  (event.target).style.fill = (colorInput.value)
+
+  //check all paths have certain color
+  var tossups = paths.length
+  var allPaths = []
+
+  for (var i = 0; i < paths.length; i++) {
+    var currentPath = document.getElementById("path" + (i + 1));
+    allPaths.push(currentPath)
+  }
+
+  var filledPaths = []
+  var result = allPaths.filter((e, i) =>{
+    return e.style.fill === colorInput.value
+  })
 }
 
 //to record constituency name on hover and to fill when hover nad f is pressed
@@ -43,44 +68,11 @@ window.addEventListener("keydown", () =>{
   }
 })
 
-//dynamic variables for districts
-
-
-//dynamic list for Parties
-var newPartyBtn = document.getElementById("newPartyBtn")
-var partyList = document.getElementById("list")
-var partyAmount = 0
-
-newPartyBtn.addEventListener("click", () =>{
-  var partyDiv = partyList.appendChild(document.createElement("div"));
-
-  partyAmount++
-
-  var colourPickerPartyName = partyDiv.appendChild(document.createElement("input"));
-  colourPickerPartyName.setAttribute("type", "text");
-
-  var colourPickerParty = partyDiv.appendChild(document.createElement("input"));
-  colourPickerParty.setAttribute("type", "color");
-
-  console.log(partyAmount);
-
-  var colourID = "id" + partyAmount
-  colourPickerParty.setAttribute("id", colourID)
-
-  partyColorInput = document.querySelector("#" + colourID)
-  console.log(partyColorInput)
-
-  partyColorInput.addEventListener("input", () =>{
-    console.log(colourID.value);
-  })
-})
+//dynamic list for Parties results
 
 
 
 
-//counting how many paths with a colour
 
 
 //to check amount of paths
-var tagPaths = document.getElementsByTagName("path")
-var amountPaths = console.log(tagPaths.length)

@@ -231,18 +231,18 @@ function cnBtn() {
   }
 }
 
-var party_creatorDiv = document.getElementById("party_creator_box")
-var pcBtnID = document.getElementById("party_creator_btn")
+var party_resultsDiv = document.getElementById("party_results_box")
+var resBtnID = document.getElementById("party_results_btn")
 
-function pcBtn() {
-  if (party_creatorDiv.style.display === "none") {
-    party_creatorDiv.style.display = "block"
+function resBtn() {
+  if (party_resultsDiv.style.display === "none") {
+    party_resultsDiv.style.display = "block"
   } else {
-    party_creatorDiv.style.display = "none"
+    party_resultsDiv.style.display = "none"
   }
-  if (party_creatorDiv.style.display === "none") {
-    pcBtnID.style.background = "#203040"
+  if (party_resultsDiv.style.display === "none") {
+    resBtnID.style.background = "#203040"
   } else {
-    pcBtnID.style.background = "green"
+    resBtnID.style.background = "green"
   }
 }

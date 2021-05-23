@@ -34,7 +34,6 @@ br {
 }
 
 path {
-  fill: #a6a6a6;
   transition: 0.15s fill;
   position: relative;
   z-index: -3;
@@ -79,7 +78,7 @@ input {
   cursor: default;
 }
 
-  .draggable_main_pc {
+  .draggable_main_res {
     padding-top: 7px;
     padding-left: 4px;
     padding-right: 4px;
@@ -96,7 +95,7 @@ input {
   cursor: pointer;
 }
 
-  .draggable_header_pc {
+  .draggable_header_res {
     padding: 10px;
     cursor: move;
     z-index: 10;
@@ -151,7 +150,7 @@ input {
   left: 112px;
 }
 
-#party_creator_btn {
+#party_results_btn {
   position: fixed;
   bottom: 0;
   left: 257.5px;
@@ -218,7 +217,7 @@ input {
   cursor: pointer;
 }
 
-#party_creator_box {
+#party_results_box {
   width: 230px;
   position: absolute;
   top: 92px;
