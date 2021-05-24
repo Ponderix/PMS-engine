@@ -11,32 +11,47 @@
   <body>
     <header>
     	<h2>Adorian National Assembly - <span id="pagetitle"> FPTP 328 seats</span></h2>
+      <div class="extra_info">
+        <ul>
+          <ul>
+            Copyright © 2021 Ponderix
+          </ul>
+          <ul>
+            Contact: <a href="mailto: bremen.ball@gmail.com">bremen.ball@gmail.com</a> or <a href="https://twitter.com/ponderix">twitter</a>
+          </ul>
+        </ul>
+      </div>
     </header>
+
 
     <button id="resetmap" onclick="location.reload(); return false;">Reset</button>
     <button id="help" onclick="helpButton()">Help</button>
     <button id="colour_picker_btn" class="draggable_box_btn" onclick="cpckBtn()">Colour Picker</button>
     <button id="const_name_btn" class="draggable_box_btn" onclick="cnBtn()">Constituency Names</button>
-    <button id="party_results_btn" class="draggable_box_btn" onclick="resBtn()">Party Creator</button>
+    <button id="party_results_btn" class="draggable_box_btn" onclick="resBtn()">Results</button>
+
+    <p id="version">Alpha v0.1.1</p>
 
     <div id="help_box">
       <div class="draggable_header">
         Help
       </div>
       <div class="draggable_main">
-        This website is a political map simulator for a First-Past-The-Post style election map of Adoria.
-        You can fill in the districts by selecting a colour with the "colour picker" and clicking a district.
-        To fill in multiple district when hovering over them press "F", to un-toggle this mode press "C".
-        To fill in the entire map with a clour, select the colour and press "D".
-        <br/>
+        <div style="font-size: 12px;">
+          This website is a political map simulator for a First-Past-The-Post style election maps.
+          You can fill in the districts by selecting a colour with the "colour picker" and clicking on said district.
+          To fill in multiple district press "F" and hover over the districts, to un-toggle this mode press "C".
+          To fill in the entire map with a selected colour, press "D".
+          <br/>
 
-        The counter which shows how many districts are filled in with a certain colour does not work yet.
-        <br/>
+          The counter which shows how many districts are filled in with a certain colour does not work yet.
+          <br/>
 
-        Credits to:
-        YAPms.com for inspring me to create this,
-        principalfish.co.uk for helping me to format this website through inspect element,
-        and many youtube videos and threads for helping me to learn how to use HTML, CSS and JavaScript.
+          Credits to:
+          <a href="https://www.yapms.com/">YAPms.com</a> for inspring me to create this,
+          <a href="http://principalfish.co.uk/">principalfish.co.uk</a> for helping me to format this website,
+          and many youtube videos and threads for helping me to learn how to use HTML, CSS and JavaScript.
+        </div>
       </div>
     </div>
 
@@ -72,7 +87,7 @@
 
     <div id="map">
       <?xml version="1.0" encoding="UTF-8"?>
-      <svg id="adoria" width="600" height="875" version="1.1" viewBox="0 50 210 297" xmlns="http://www.w3.org/2000/svg">
+      <svg id="adoria" width="630" height="875" version="1.1" viewBox="0 50 210 297" xmlns="http://www.w3.org/2000/svg">
         <rect class="background" width="600" height="875"></rect>
         <g id="outlines" class="svg-pan-zoom_viewport">
           <path id="path833" onclick="pathclick(event)" onmouseover="pathHover()" d="m130.27 72.421 0.10806 0.0055v-0.3074l0.0935-0.08115 0.0934-0.08115-0.057-0.07224c-0.0313-0.03974-0.077-0.18454-0.10163-0.32178l-0.0446-0.24954 0.1312-0.0848 0.42143 0.04175c0.23179 0.02297 0.48084 0.06231 0.55348 0.08744l0.13204 0.04569-0.0314-0.31275c-0.0173-0.17201-0.0559-0.34039-0.0857-0.37417s-0.0542-0.14289-0.0542-0.24246v-0.18104h-0.44545l-0.30123-0.15832-0.30122-0.15832-0.0893 0.09336c-0.0491 0.05135-0.31418 0.1855-0.58914 0.29812l-0.49993 0.20477 0.0406 0.23197c0.0223 0.12758 0.0784 0.28936 0.12451 0.3595l0.0839 0.12753v0.40799l-0.0927 0.08049c-0.0509 0.04427-0.0927 0.11718-0.0927 0.16202v0.08153l0.44796 0.19601c0.24637 0.10781 0.49661 0.19848 0.55608 0.2015z"><title>Port Royale</title></path>

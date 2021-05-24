@@ -9,7 +9,7 @@ body {
 
 header {
   width: 100%;
-  height: 60px;
+  height: 70px;
   color: #000000;
   background-color: #ffffff;
   margin-top: 5px;
@@ -53,6 +53,20 @@ input {
 .heading_class {
   text-align: center;
   font-family: sans-serif;
+}
+
+.extra_info ul {
+  font-size: 9px;
+  list-style: none;
+  display: inline;
+  padding-left: 15px;
+}
+.extra_info {
+  position: relative;
+  margin: 0;
+  bottom: 27px;
+  padding: 0;
+  left: 37px;
 }
 
 .background {
@@ -183,7 +197,7 @@ input {
   display: none;
   width: 400px;
   position: absolute;
-  top: 92px;
+  top: 102px;
   left: 124px;
   z-index: 9;
   background-color: #f1f1f1;
@@ -194,8 +208,8 @@ input {
 #colorpicker_box {
   width: 230px;
   position: absolute;
-  top: 92px;
-  left: 880px;
+  top: 102px;
+  left: 910px;
   z-index: 9;
   background-color: #f1f1f1;
   text-align: left;
@@ -209,8 +223,8 @@ input {
 #constituency_title_box {
   width: 230px;
   position: absolute;
-  top: 181px;
-  left: 880px;
+  top: 191px;
+  left: 910px;
   z-index: 9;
   background-color: #f1f1f1;
   text-align: left;
@@ -220,10 +234,23 @@ input {
 #party_results_box {
   width: 230px;
   position: absolute;
-  top: 92px;
-  left: 620px;
+  top: 102px;
+  left: 656px;
   z-index: 9;
   background-color: #f1f1f1;
   text-align: left;
   cursor: pointer;
+}
+
+#version {
+  position: absolute;
+  font-size: 12px;
+  float: right;
+  z-index: 1;
+  right: 0;
+  bottom: 0;
+  padding-right: 5px;
+  padding-bottom: 5px;
+  margin: 0px;
+  color: #f1f1f1;
 }
