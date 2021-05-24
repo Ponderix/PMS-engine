@@ -1,5 +1,6 @@
 # Political-Map-Simulator 
 Political map simulator to create your own custom election maps.
+(Alpha v0.1.1)
 
 ## Current maps
 Adoria (invented country) hyopthetical election map.
