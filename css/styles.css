@@ -50,6 +50,11 @@ input {
   padding: none;
 }
 
+#list ul {
+  padding-left: 10px;
+  margin: 10px 0 10px 0;
+}
+
 .heading_class {
   text-align: center;
   font-family: sans-serif;
@@ -133,24 +138,9 @@ input {
   background: green;
 }
 
-#newPartyBtn {
-  text-align: center;
-  font-weight: bold;
-  cursor: pointer;
-}
 
 #list{
   -moz-user-select:none;
-}
-
-#add-btn {
-  background-color: #c74040;
-  color: white;
-  cursor: pointer;
-  padding: 5px 12px;
-  font-size: 12px;
-  border: none;
-  margin-top: 5px;
 }
 
 #colour_picker_btn {
@@ -185,6 +175,31 @@ input {
   left: 69px;
   position: fixed;
   background-color: #c74040;
+  color: white;
+  cursor: pointer;
+  padding: 5px 12px;
+  font-size: 12px;
+  border: none;
+  margin-top: 7px;
+}
+
+#save_btn {
+  width: 95px;
+  top: 150px;
+  position: fixed;
+  background-color: #2d5ead;
+  color: white;
+  cursor: pointer;
+  padding: 5px 12px;
+  font-size: 12px;
+  border: none;
+  margin-top: 7px;
+}
+#upload_btn {
+  width: 95px;
+  top: 180px;
+  position: fixed;
+  background-color: #2d5ead;
   color: white;
   cursor: pointer;
   padding: 5px 12px;

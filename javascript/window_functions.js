@@ -1,21 +1,4 @@
 //zoom in svg
-//var svgzoom = svgPanZoom("#adoria")
-
-
-var svg = d3.select("#adoria")
-var g = d3.select("#outlines")
-var rect = d3.select("rect");
-
-var zoom = d3.zoom()
-  .scaleExtent([1, 50])
-  .on("zoom", zoomed);
-
-svg.call(zoom);
-
-function zoomed(event) {
-  var transform = event.transform;
-  g.attr("transform", transform.toString());
-}
 
 
 //draggable div
