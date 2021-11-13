@@ -8,23 +8,26 @@ var zoom = d3.zoom()
   .scaleExtent([1, 50])
   .on("zoom", zoomed);
 
-svg.call(zoom);
+svg.call(zoom).on("dblclick.zoom", null);
 
 function zoomed(event) {
   var transform = event.transform;
   g.attr("transform", transform.toString());
 }
 
-//misc path function
-var paths = document.getElementsByTagName("path")
 
+
+//filling paths with color
 d3.selectAll("path")
   .style("fill", "#a6a6a6")
   .attr("id", (p, i) =>{
     return "path" + (i + 1);
   });
 
-//fill paths with colour selected
+
+
+
+//showing hex value of selected color
 var colorInput = document.querySelector("#color")
 var hexInput = document.querySelector("#hex")
 
@@ -33,7 +36,10 @@ colorInput.addEventListener("input", () =>{
   hexInput.value = colorPicked
 })
 
-//check all paths have certain color
+
+
+//array of all paths
+var paths = document.getElementsByTagName("path")
 var allPaths = [];
 
 for (var i = 0; i < paths.length; i++) {
@@ -42,20 +48,52 @@ for (var i = 0; i < paths.length; i++) {
 }
 
 
+
+
+//onclick events
+function appendParty() {
+  let party_result = d3.select("#list").append("ul");
+
+      party_result.html((e, i) =>{
+        return "test"; //temp
+      });
+
+      party_result.append("div")
+        .attr("class", "party_flair")
+        .style("background-color", colorInput.value);
+}
+
 function pathclick(event) {
-  (event.target).style.fill = (colorInput.value)
+  (event.target).style.fill = (hexRgb(colorInput.value))
 
   //adding parties to results box on click according to color
-  d3.select("#list")
-    .append("ul")
-      .html("test")
+  var party_list = document.getElementById("list");
+  var existing_parties = party_list.querySelectorAll("ul");
+
+  console.log();
+
+  if (existing_parties.length != 0) {
+    for (var i = 0; i < existing_parties.length; i++) {
+      //DOES IT FOR THE ENTIRE LENGTH, CHANGE TO ONLY DOING IT ONCE
+      if (existing_parties[i].outerHTML.includes("rgb(0, 0, 0)") != true) {
+        appendParty()
+      } else {
+        return null;
+      }
+    }
+  } else {
+    appendParty()
+  }
+
+
 
   var filledPaths = allPaths.filter((e, i) =>{ //creates an array with all baths matching colour
     return e.style.fill === "rgb(0, 0, 0)"
   })
-  console.log(filledPaths);
+  //console.log(filledPaths);
 
 }
+
 
 
 //to record constituency name on hover and to fill when hover nad f is pressed
@@ -86,6 +124,8 @@ window.addEventListener("keydown", () =>{
     }
   }
 })
+
+
 
 //saving and uploading state of map
 /* var save = document.getElementById("save_btn");

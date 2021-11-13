@@ -46,10 +46,6 @@ input[type=color] {
   background: none;
 }
 
-input {
-  padding: none;
-}
-
 #list ul {
   padding-left: 10px;
   margin: 10px 0 10px 0;
@@ -138,6 +134,24 @@ input {
   background: green;
 }
 
+
+
+/*IMPORTANT*/
+.party_flair {
+  border-radius: 2px;
+  background-clip: padding-box;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+
+#color {
+  position: relative;
+  top: 6px;
+}
 
 #list{
   -moz-user-select:none;
