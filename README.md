@@ -1,10 +1,7 @@
-# Political-Map-Simulator
-*Alpha v0.0.1*
-Political map simulator to create your own custom election maps.
-(Alpha v0.1.1)
+# Political Map Simulator
 
-## Current maps
-Adoria (invented country) hypothetical election map.
+## Naming Conventions
+Maps in `assets/maps` should be named `[Country]_[type-(YEAR)]_(HYP)`. E.g `Germany_wahlkreise-2021` for a real life map or `Adoria_nationalAssembly_HYP` for a hypothetical map. All fictional countries count as hypothetical. the `[type]` must be in one word, so if the type is multiple words they must be written together like so: `regionalParliament`.
 
-## Features to come
-The next update will feature a district-counter to count how many districts are filled in with a certain colour.
+## Other Notes
+All files in `assets/maps/geojson` must be topojson GeoJSON files.
