@@ -5,3 +5,6 @@ Maps in `assets/maps` should be named `[Country]_[type-(YEAR)]_(HYP)`. E.g `Germ
 
 ## Other Notes
 All files in `assets/maps/geojson` must be topojson GeoJSON files.
+
+
+The main object of the GeoJSON file must be named `boundaries` so it can be accessed through `.data(topojson.feature(data, data.objects.boundaries).features)`.
