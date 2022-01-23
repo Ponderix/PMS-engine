@@ -1,4 +1,4 @@
-/* fetch and load map type on given document */
+/* fetch map type on given document */
 async function json(e, n) {
     const path = d3.geoPath().projection(d3.geoMercator());
 
@@ -8,19 +8,11 @@ async function json(e, n) {
         .enter().append("path")
             .attr("d", path);
 
-    style(map);
-
     return map;
 }
 
 async function svg(n) {
 
-}
-
-function style(m) {
-    m.style("fill", "#646464");
-    m.style("stroke-width", 1);
-    m.style("stroke", "white");
 }
 
 export {json, svg};

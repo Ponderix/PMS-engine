@@ -6,7 +6,15 @@ Maps in [assets/maps](assets/maps) should be named `[Country]_[type-(YEAR)]_(HYP
 In the end the name does not really matter, since file paths are defined as shorthand variables in [dict.js](script/map/dict.js) so they do not have to be written out every time.
 
 ## Other Notes
-All files in `assets/maps/geojson` must be topojson GeoJSON files.
+All maps in [assets/maps/geojson](assets/maps/geojson) must be topojson GeoJSON files.
 
 
-The main object of the GeoJSON file must be named `boundaries` so it can be accessed through `.data(topojson.feature(data, data.objects.boundaries).features)`.
+The main object of the GeoJSON file must be named `boundaries` so it can be properly be parsed.
+In example:
+```js
+//this function parses the GeoJSON file and transforms it into a vector graphic
+let map = e.selectAll("path")
+    .data(topojson.feature(data, data.objects.boundaries).features) //here is the important part, look at keyword ".boundaries"
+    .enter().append("path")
+        .attr("d", path);
+```
