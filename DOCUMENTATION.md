@@ -1,12 +1,12 @@
 # Documentation
 Documentation regarding various topics such as the engine code, use of libraries and technical concepts. Useful for those who wish to use their own custom election maps.
 * [Map Types](#map)
-    - [SVG](svg)
-    - [GeoJSON](geojson)
+    - [SVG](#svg)
+    - [GeoJSON](#geojson)
 * [d3.js Bounding Boxes](#bounding)
-    - [The Concept](concept)
-    - [Geographical vs Planar](comparison)
-    - [Uses](uses)
+    - [The Concept](#concept)
+    - [Geographical vs Planar](#comparison)
+    - [Uses](#uses)
 
 
 
