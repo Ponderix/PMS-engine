@@ -1,5 +1,5 @@
 # Political Map Simulator
-Copyright (C) 2021  Ponderix
+Copyright (c) 2021  Ponderix
 
 A website engine which aims to create a more transparent and dynamic way of making interactive political map websites. Initially intended for the [GovMap](https://github.com/haroldTheDeveloper/GovMap) project.
 
