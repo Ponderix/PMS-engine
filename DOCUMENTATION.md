@@ -36,6 +36,15 @@ GeoJSONs are preferred to SVGs because they are easier to customise with code, h
 ## Bounding Boxes <a name="bounding"></a>
 
 ### The Concept <a name="concept"></a>
+Bounding boxes are boxes drawn around the outline of a shape. It is a rectangle which is as wide and long as the maximum width and length of the object. For clarification look at the image of a bounding box on a vector path below. 
+
+It is important to note that SVGs draw paths from the top left corner, not the bottom left corner as would be standard in mathematics. Hence the origin is the top left corner, and all coordinates are relative to that point.
+
+<img src="assets/img/bounding.PNG" margin="10px" height="250px">
+
+Bounding boxes are calculated with the d3.js library with the command `path.bounds(features);`. This function finds the bounding box of certain features, features in this case being singular paths or collections of paths. This function returns a two dimensional array with the format of `[[minX, minY], [maxX, maxY]]`. These are the coordinates of the corners of the box, only four are needed because some coordinates repeat.
+
+Like this the width and height of paths can easily be calculated without complex functions. For example the width can be calculated with `maxX-minX`, and the height with `maxY-minY`. The center of the object can then be calculated by dividing the width in two and the height in two; `center = [width / 2, height, 2]`.
 
 ### Geographical vs Planar <a name="comparison"></a>
 
