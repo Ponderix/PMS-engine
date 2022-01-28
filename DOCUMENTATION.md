@@ -21,7 +21,7 @@ For this to work you will need either SVG or topojson maps. They have to be as s
 
 Once you have obtained your map, navigate to the [assets/maps](assets/maps) folder and the appropriate subfolder depending on if it is a SVG or GeoJSON, and upload the map to that folder.
 
-Then navigate to the [script/map/dict.js](script/map/dict.js) folder and under the `const` declaration at the top paste this with the appropriate text filled:
+Then navigate to the [script/map/dict.js](script/map/dict.js) file and under the `const` declaration at the top, paste this with the appropriate text filled:
 ```js
 filepath[CUSTOM_NAME] = PATH_TO_MAP;
 ```
