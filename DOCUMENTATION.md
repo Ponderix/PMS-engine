@@ -19,7 +19,7 @@ To upload your own maps you will need to host the website yourself, preferably o
 
 For this to work you will need either SVG or topojson maps. They have to be as simple as possible with the only paths/polygons being those of the electoral or provincial districts. Note that on the topojson maps the feature collection has to be named `boundaries`.
 
-Once you have obtained your map, navigate to the [assets/maps](assets/maps) folder and the appropriate subfolder depending on if it is a SVG or GeoJSON.
+Once you have obtained your map, navigate to the [assets/maps](assets/maps) folder and the appropriate subfolder depending on if it is a SVG or GeoJSON, and upload the map to that folder.
 
 Then navigate to the [script/map/dict.js] folder and under the `const` declaration at the top paste this with the appropriate text filled:
 ```js
