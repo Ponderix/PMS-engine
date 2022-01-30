@@ -3,6 +3,8 @@ Copyright (c) 2021  Ponderix
 
 A website engine which aims to create a more transparent and dynamic way of making interactive political map websites. Initially intended for the [GovMap](https://github.com/haroldTheDeveloper/GovMap) project.
 
+If you wish to upload custom maps please take a look at the instruction in the [documentation](DOCUMENTATION.md).
+
 ## Naming Conventions
 Maps in [assets/maps](assets/maps) should be named `[Country]_[type-(YEAR)]_(HYP)`. E.g `Germany_Wahlkreise-2021` for a real life map or `Adoria_NationalAssembly_HYP` for a hypothetical map, all fictional countries count as hypothetical. The `[type]` must be written as one word, even if the proper name is two seperate words e.g `RegionalParliament`.
 
@@ -33,4 +35,3 @@ let map = e.selectAll("path")
 
 
 An extensive guide to GIS and vector graphics as well as the use of bounding boxes and coordinate systems cis provided in [documentation](DOCUMENTATION.md).
-

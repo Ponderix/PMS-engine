@@ -1,6 +1,9 @@
 # Documentation
 Documentation regarding various topics such as the engine code, use of libraries and technical concepts. Useful for those who wish to use their own custom election maps.
-* [Uploading Custom Maps [NOT FUNCTIONAL YET]](#custom)
+* [Uploading Custom Maps (NOT FUNCTIONAL YET)](#custom)
+    - [DISCLAIMER!](#disclaimer)
+    - [Instructions](#instructions)
+    - [Troubleshooting](#Troubleshooting)
 * [Map Types](#map)
     - [SVG](#svg)
     - [GeoJSON](#geojson)
@@ -10,14 +13,14 @@ Documentation regarding various topics such as the engine code, use of libraries
     - [Uses](#uses)
 
 
-## Uploading Custom Maps [NOT FUNCTIONAL YET] <a name="custom"></a>
-DISCLAIMER!
+## Uploading Custom Maps (NOT FUNCTIONAL YET) <a name="custom"></a>
+### DISCLAIMER! <a name="disclaimer"></a>
 
 
 To upload your own maps you will need to host the website yourself, preferably on a localhost. Please take the [terms and conditions](LICENSE) into consideration when doing this.
 
-
-For this to work you will need either SVG or topojson maps. They have to be as simple as possible with the only paths/polygons being those of the electoral or provincial districts. Note that on the topojson maps the feature collection has to be named `boundaries`.
+### Instructions <a name="instructions"></a>
+For this to work you will need either SVG or topojson maps. They have to be as simple as possible with the only paths/polygons being those of the electoral or provincial districts. Note that on the topojson maps the main object has to be named `boundaries`.
 
 Once you have obtained your map, navigate to the [assets/maps](assets/maps) folder and the appropriate subfolder depending on if it is a SVG or GeoJSON, and upload the map to that folder.
 
@@ -29,6 +32,30 @@ for example:
 ```js
 filepath["adoria"] = "./assets/maps/svg/Adoria_NationalAssembly_HYP.svg";
 ```
+
+### Troubleshooting <a name="Troubleshooting"></a>
+There may be a few cases where the map loads as a jumbled mess of lines and shapes or it does not appear entirely.
+
+<img src="assets/img/failexample.png" margin="10px" height="250px">
+
+#### console error
+This may be due to an error in the formatting of the topojson file, check the console for errors and then check if you have named the topojson object `boundaries` as states in the instructions.
+
+#### badly drawn shapes
+The second reason this may occur is due to line intersections and badly drawn shapes. This is not the fault of the website or you, it is the fault of those who initially drew the map. To solve this issue go to [mapshaper](https://mapshaper.org/) and import the faulty map. On the loading screen tick the "snap vertices" option and import, this should solve the majority of misplaced borders.
+
+<img src="assets/img/mapshaperload.png" margin="10px" height="250px">
+
+Once you have loaded the map, check if there are still orange points left at some of the borders. This indicates that there are still some errors in the lines.
+
+<img src="assets/img/mapshaperinter.png" margin="10px" height="250px">
+
+To solve this click on console in the top right and type and execute the following command:
+```
+$ -clean
+```
+This should then clean up any errors left. Make sure that once you have executed the command, that the console states that all of the shapes have been retained. Otherwise it means that a district had to be deleted due to it being too buggy.
+
 
 ## Map Types <a name="map"></a>
 This project makes use of two distinct map file types. Although they both end up as inline SVGs once the initial loading sequence is complete, they start off as two wildly different file types.
@@ -122,4 +149,3 @@ centre : function(features) {
         return center;
     }
 ```
-
