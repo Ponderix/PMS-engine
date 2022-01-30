@@ -1,21 +1,23 @@
-const filepath = {};
-    filepath["germany"] = "./assets/maps/geojson/Germany_Wahlkreise-2021.json";
-    filepath["adoria"] = "./assets/maps/svg/Adoria_NationalAssembly_HYP.svg";
+const dict = {};
+    dict["germany"] = {
+        path : "./assets/maps/geojson/Germany_Bundestag-2021.json",
+        title : "German Bundestag Constituencies"
+    };
+    dict["niedersachsen"] = {
+        path : "./assets/maps/geojson/Germany_NiedersachsenLandtag-2008.json",
+        title : "Niedersachsen Landtag Constituencies"
+    };
+    dict["nrw"] = {
+        path : "./assets/maps/geojson/Germany_NRWLandtag-2017.json",
+        title : "Nordrhein-Westfalen Landtag Constituencies"
+    };
+    dict["englandProposals"] = {
+        path : "./assets/maps/geojson/UK_EnglandProposals-2023.json",
+        title : "England Westminster Constituencies: 2023 Initial Proposals"
+    };
 
-export {filepath};
-
-/*
-some function building notes
-    function parameters shorthands
-    * e => element
-    * n => given number or string
-    * m => map
-    * d => data
-    * i => index
-    * p => path
-    * fc => feature collection
-    * wd, ht, ln => width, height, length
-
-    only simple short values should be named constants
-    longer strings of functions should be defined with let unless variable features are needed
-*/
+    dict["adoria"] = {
+        path : "./assets/maps/svg/Adoria_NationalAssembly_HYP.svg",
+        title : "Adoria (fictional) National Assembly Constituecies"
+    };
+export {dict};
