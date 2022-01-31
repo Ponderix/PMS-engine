@@ -3,7 +3,7 @@ Documentation regarding various topics such as the engine code, use of libraries
 * [Uploading Custom Maps (NOT FUNCTIONAL YET)](#custom)
     - [DISCLAIMER!](#disclaimer)
     - [Instructions](#instructions)
-    - [Troubleshooting](#Troubleshooting)
+    - [Troubleshooting TopoJSON maps](#troubleshooting)
 * [Map Types](#map)
     - [SVG](#svg)
     - [GeoJSON](#geojson)
@@ -20,9 +20,9 @@ Documentation regarding various topics such as the engine code, use of libraries
 To upload your own maps you will need to host the website yourself, preferably on a localhost. Please take the [terms and conditions](LICENSE) into consideration when doing this.
 
 ### Instructions <a name="instructions"></a>
-For this to work you will need either SVG or topojson maps. They have to be as simple as possible with the only paths/polygons being those of the electoral or provincial districts. Note that on the topojson maps the main object has to be named `boundaries`.
+For this to work you will need either SVG or topojson maps. They have to be as simple as possible without any additional texts or images on them. It should only the electoral districts and nothing else. Note that the main object on the topojson maps has to be named `boundaries`.
 
-Once you have obtained your map, navigate to the [assets/maps](assets/maps) folder and the appropriate subfolder depending on if it is a SVG or GeoJSON, and upload the map to that folder.
+Once you have obtained your map navigate to the [assets/maps](assets/maps) folder and the appropriate subfolder, depending if it is a SVG or GeoJSON, and copy the map to that folder.
 
 Then navigate to the [script/map/dict.js](script/map/dict.js) file and under the `const` declaration at the top, paste this with the appropriate text filled:
 ```js
@@ -33,7 +33,7 @@ for example:
 filepath["adoria"] = "./assets/maps/svg/Adoria_NationalAssembly_HYP.svg";
 ```
 
-### Troubleshooting <a name="Troubleshooting"></a>
+### Troubleshooting TopoJSON maps <a name="troubleshooting"></a>
 There may be a few cases where the map loads as a jumbled mess of lines and shapes or it does not appear entirely.
 
 <img src="assets/img/failexample.png" margin="10px" height="250px">
@@ -41,8 +41,25 @@ There may be a few cases where the map loads as a jumbled mess of lines and shap
 #### console error
 This may be due to an error in the formatting of the topojson file, check the console for errors and then check if you have named the topojson object `boundaries` as states in the instructions.
 
+#### initial map projection
+The d3.js and topojson libraries only accept maps which are in the WGS84 projection, the standard projection for many geographic services and engines. Maps in this projection are typically very wide and distorted.
+
+To convert to this projection, import the map to [mapshaper](https://mapshaper.org/) and open the console. Then type in the following command:
+```
+$ -proj wgs84
+```
+If this returns an error going along the lines of `Unable to project -- source coordinate system is unknown` then that means that you have to specify the current projection of the map. The projection is typically specified on the website you got the map from, it looks a little like `EPSG:##### ETRS## / UTM zone ###`. All you will need is the "EPSG:#####", this is the universal ID for the projection. Using this ID execute the following command:
+```
+$ -proj from='EPSG:#####' wgs84
+```
+If you can't find the EPSG ID, and only have the UTM zone then try this command:
+```
+$ -proj from='+proj=utm +zone=###' wgs84
+```
+If you can't find any info on the initial projection you will need to find an SVG version of the map.
+
 #### badly drawn shapes
-The second reason this may occur is due to line intersections and badly drawn shapes. This is not the fault of the website or you, it is the fault of those who initially drew the map. To solve this issue go to [mapshaper](https://mapshaper.org/) and import the faulty map. On the loading screen tick the "snap vertices" option and import, this should solve the majority of misplaced borders.
+If it still doesn't work it may be due to badly drawn shapes. This occurs when the original creators of the maps leave an error in the coordinates. To solve this issue go to [mapshaper](https://mapshaper.org/) and import the faulty map. On the loading screen tick the "snap vertices" option and then import. This should solve the majority of misplaced borders.
 
 <img src="assets/img/mapshaperload.png" margin="10px" height="250px">
 

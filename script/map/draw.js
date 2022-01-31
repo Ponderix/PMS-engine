@@ -9,14 +9,7 @@ function drawMap(c, n) {
 
     let map = load.json(g, n);
 
-    map.then(d => style(d))
-}
-
-// initial styling
-function style(m) {
-    m.style("fill", "#646464");
-    m.style("stroke-width", 0.5);
-    m.style("stroke", "white");
+    map.then(d => d.attr("class", "map__path"));
 }
 
 export {drawMap};
