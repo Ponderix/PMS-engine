@@ -16,13 +16,23 @@ async function json(e, n) {
     let map = e.selectAll("path")
         .data(collection.features)
         .enter().append("path")
-            .attr("d", path);
+            .attr("d", path)
+            .html(d => name(d));
 
     return map;
 }
 
 async function svg(n) {
 
+}
+
+// get name of district, return as path title
+function name(d) {
+    let properties = d.properties;
+
+    if (Object.values(properties).length > 0) {
+        return `<title>${properties.name}</title>`;
+    }
 }
 
 // calculating coordinates to centre maps dynamically

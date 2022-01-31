@@ -32,6 +32,18 @@ for example:
 ```js
 filepath["adoria"] = "./assets/maps/svg/Adoria_NationalAssembly_HYP.svg";
 ```
+If you are uploading a topojson map and each district has a name as on of its properties, rename the identifier to `name`. This can be done quickly on most source text editors with the CTRL+F/CMD+F find/replace functions.
+```json
+"properties": {
+    "Constituency": "Worksop and Retford", <---- change "Constituency" to "name"
+    "Electorate": 75773,
+    "Designation": "County Constituency",
+    "Region": "East Midlands Region",
+    "Region_ID": 2,
+    "Area_Km2": 398.79,
+    "Density": 190.01
+}
+```
 
 ### Troubleshooting TopoJSON maps <a name="troubleshooting"></a>
 There may be a few cases where the map loads as a jumbled mess of lines and shapes or it does not appear entirely.
