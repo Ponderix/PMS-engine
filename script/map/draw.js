@@ -1,6 +1,8 @@
 import * as load from "./fetch.js";
 //import {propagate} from "./interactive.js"
 
+const exceptions = ["Adoria", "Hungary"]
+
 // draw map in appropriate containers with suitable format
 function drawMap(c, n) {
     const svg = c.append("svg")
@@ -17,7 +19,7 @@ function drawMap(c, n) {
     map.then(d => {
         d.attr("class", "map__path")
             .style("stroke-width", () => {
-                if (n.includes("Adoria")) return 0 // adoria map already has space between districts
+                if (exceptions.some(e=>n.includes(e))) return 0 // adoria map already has space between districts
                 else return null;
             });
         });
