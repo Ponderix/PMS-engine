@@ -23,6 +23,6 @@ const dict = {};
     dict["adoria"] = {
         path : "./assets/maps/svg/Adoria_NationalAssembly_HYP.svg",
         title : "Adoria (fictional) National Assembly Constituecies",
-        copyright : null
+        copyright : "© Ponderix 2019,<br/>election map for the Adoria political simulation."
     };
 export {dict};

@@ -2,12 +2,14 @@
     width: 100vw;
     height: 100vh;
 }
-    .map-title-container {}
-        #title__main {
-            font-size: 1.5vw;
+    .map-title {
+        font-size: 2vw;
+    }
+        .map-title__main {
+            font-weight: bold;
         }
-        #title__copyright {
-            font-size: 1vw;
+        .map-title__copyright {
+            font-size: 0.5em;
         }
     .map-container {
         width: 100%;
