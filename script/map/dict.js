@@ -30,4 +30,9 @@ const dict = {};
         title : "Hungarian National Assembly Constituecies",
         copyright : "© Erinthecute 2021<br/>(CC BY-SA 4.0)"
     };
+    dict["germany598"] = {
+        path : "./assets/maps/svg/Germany_LargerBundestag_HYP.svg",
+        title : "Germany Bundestag: Hypothetical 598 Constituencies",
+        copyright : "© Ponderix 2021<br/>(CC BY-SA 4.0)"
+    };
 export {dict};
