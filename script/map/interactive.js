@@ -1,12 +1,14 @@
 const propagate = {
-    zoomed : function(g) {
-        let transform = event.transform;
-        g.attr("transform", transform.toString());
+    zoom : function(e) {
+        return d3.zoom()
+            .scaleExtent([0.25, 100])
+            .on("zoom", (event) => {
+                let transform = event.transform;
+                e.attr("transform", transform.toString());
+            });
     },
 
-    zoom : d3.zoom().scaleExtent([1, 20]).on("zoom", this.zoomed),
-
-    reset : function() {
+    reset : function(e) {
 
     }
 }

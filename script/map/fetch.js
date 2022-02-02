@@ -26,14 +26,15 @@ async function svg(e, n) {
 
     const data = await d3.xml(n);
     const collection = filterXML(data.documentElement.children);
+    const g = e.append("g").attr("class", "map-path-g") // needed for SVG, otherwise zoom resets centering transform
 
-    let map = e.selectAll("path")
+    let map = g.selectAll("path")
         .data(collection)
         .enter().append("path")
             .attr("transform", (d, i) => nodeAttr(collection, i, "transform")) // in case some paths have been transformed
             .attr("d", (d, i) => nodeAttr(collection, i, "d"));
 
-    e.attr("transform", calculate.transform(e, width, height));
+    g.attr("transform", calculate.transform(g, width, height));
 
     return map;
 }

@@ -17,6 +17,6 @@
     }
         .map__path {
             stroke: white;
-            stroke-width: 0.5px;
+            stroke-width: 0.3;
             fill: #646464;
         }
