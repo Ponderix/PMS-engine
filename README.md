@@ -5,6 +5,8 @@ A website engine which aims to create a more transparent and dynamic way of maki
 
 If you wish to upload custom maps please take a look at the instruction in the [documentation](DOCUMENTATION.md).
 
+This repository and the corresponding website is only supposed to act as quick preview option for the engine. Therefore the styling and formatting of the website is minimal. The main focus of this project is on the loading sequences & interactivity of the maps.
+
 ## Naming Conventions
 Maps in [assets/maps](assets/maps) should be named `[Country]_[type-(YEAR)]_(HYP)`. E.g `Germany_Wahlkreise-2021` for a real life map or `Adoria_NationalAssembly_HYP` for a hypothetical map, all fictional countries count as hypothetical. The `[type]` must be written as one word, even if the proper name is two seperate words e.g `RegionalParliament`.
 

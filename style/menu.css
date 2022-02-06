@@ -1,0 +1,45 @@
+.menu-button {
+    cursor: pointer;
+    display: inline-block;
+    margin: 1vw 0 0 3.5vw;
+}
+        .menu-button__line {
+            width: 2vw;
+            height: 0.25vw;
+            background-color: #333;
+            margin: 0.5vw 0;
+            transition: 0.7s;
+        }
+        .--menu-button-clicked .menu-button__line1 {
+            transform: rotate(-45deg) translate(-0.6vw, 0.3vw);
+        }
+        .--menu-button-clicked .menu-button__line2 {opacity: 0}
+        .--menu-button-clicked .menu-button__line3 {
+            transform: rotate(45deg) translate(-0.75vw, -0.5vw);
+        }
+
+.menu-body {
+    position: absolute;
+    margin: 7.5vw 0 0 3.5vw;
+}
+
+    .menu__list {
+        width: 50%;
+        font-size: 1vw;
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-content: space-around;
+        gap: 10px;
+    }
+        .list__item {
+            padding: 1.5em;
+            text-align: center;
+            background-color: white;
+            border: 0.15em solid black;
+            cursor: pointer;
+            color: black;
+        }
+        .list__item:hover {background-color: black; color: white; transition: 0.25s;}
+        .list__item.--active {text-decoration: underline;}

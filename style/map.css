@@ -1,22 +1,26 @@
 .map {
-    width: 100vw;
-    height: 100vh;
+    margin: auto;
+    width: 95vw;
+    height: 90vh;
 }
-    .map-title {
+
+    .map__title {
         font-size: 2vw;
+        padding: 1vw;
     }
-        .map-title__main {
+        .map__title-main {
             font-weight: bold;
         }
-        .map-title__copyright {
+        .map__title-copyright {
             font-size: 0.5em;
         }
-    .map-container {
+
+    .map__container {
         width: 100%;
         height: 100%
     }
         .map__path {
             stroke: white;
-            stroke-width: 0.3;
+            stroke-width: 0.3px;
             fill: #646464;
         }

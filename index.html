@@ -5,13 +5,18 @@
         <title>PMS-Engine</title>
         <link rel="icon" type="image/png" href="assets/img/favicon-32x32.png">
 
-        <!-- style sheets -->
-        <link rel="stylesheet" href="style/map.css">
-
-        <!-- script -->
+        <!-- libs -->
+        <script type="text/javascript" src="libs/jquery.min.js" charset="utf-8"></script>
+        <script type="text/javascript" src="libs/jquery-ui.min.js" charset="utf-8"></script>
         <script type="text/javascript" src="libs/d3.min.js" charset="utf-8"></script>
         <script type="text/javascript" src="libs/topojson.min.js" charset="utf-8"></script>
 
+        <!-- style sheets -->
+        <link rel="stylesheet" href="style/map.css">
+        <link rel="stylesheet" href="style/menu.css">
+        <link rel="stylesheet" href="style/index.css">
+
+        <!-- script -->
         <script type="module" src="script/map/dict.js" charset="utf-8"></script>
         <script type="module" src="script/map/fetch.js" charset="utf-8"></script>
         <script type="module" src="script/map/interactive.js" charset="utf-8"></script>
@@ -21,9 +26,20 @@
     </head>
 
     <body>
+        <!-- courtesy of www.w3schools.com -->
+        <div class="menu-button">
+            <div class="menu-button__line menu-button__line1"></div>
+            <div class="menu-button__line menu-button__line2"></div>
+            <div class="menu-button__line menu-button__line3"></div>
+        </div>
+
+        <div class="menu-body">
+            <div class="menu__list"></div>
+        </div>
+
         <div class="map">
-            <div class="map-title"></div>
-            <div class="map-container"></div>
+            <div class="map__title"></div>
+            <div class="map__container"></div>
         </div>
     </body>
 </html>
