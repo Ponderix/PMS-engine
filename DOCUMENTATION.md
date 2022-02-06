@@ -121,7 +121,7 @@ Bounding boxes are boxes drawn around the outline of a shape. It is a rectangle 
 
 It is important to note that SVGs draw paths from the top left corner, not the bottom left corner as would be standard in mathematics. Hence the origin is the top left corner, and all coordinates are relative to that point.
 
-<img src="assets/img/bounding.PNG" margin="10px" height="250px">
+<img src="assets/img/bounding.png" margin="10px" height="250px">
 
 Bounding boxes are calculated with the d3.js library with the bounds function. This function finds the bounding box of certain features, features in this case being singular paths or collections of paths. This function returns a two dimensional array with the format of `[[minX, minY], [maxX, maxY]]`. These are the coordinates of the corners of the box, only four are needed because some coordinates repeat.
 ```js
