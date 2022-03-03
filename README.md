@@ -1,39 +1,55 @@
-# Political Map Simulator Engine
-Copyright (c) 2021  Ponderix
+<h1 align="center">Political Map Simulator Engine</h1>
 
-A website engine which aims to create a more transparent and dynamic way of making interactive political map websites. Initially intended for the [GovMap](https://github.com/haroldTheDeveloper/GovMap) project.
+<p align="center">
+    <img src="assets/img/android-chrome-512x512.png" alt="logo" width="120px" height="120px"/>
+    <br>
+    <i>PMS-engine is a website engine which aims to create a more transparent and dynamic way of making interactive political map websites. Initially intended for the <a href="https://github.com/haroldTheDeveloper/GovMap">GovMap</a> project.
+    </i>
+    <br>
+</p>
 
-If you wish to upload custom maps please take a look at the instruction in the [documentation](DOCUMENTATION.md).
+<p align="center">
+    <a href="DOCUMENTATION.md">Documentation</a>
+    ·
+    <a href="https://ponderix.github.io/PMS-engine">Preview Website</a>
+    <br>
+    <br>
+</p>
 
+<hr>
 This repository and the corresponding website is only supposed to act as quick preview option for the engine. Therefore the styling and formatting of the website is minimal. The main focus of this project is on the loading sequences & interactivity of the maps.
 
-## Naming Conventions
-Maps in [assets/maps](assets/maps) should be named `[Country]_[type-(YEAR)]_(HYP)`. E.g `Germany_Wahlkreise-2021` for a real life map or `Adoria_NationalAssembly_HYP` for a hypothetical map, all fictional countries count as hypothetical. The `[type]` must be written as one word, even if the proper name is two seperate words e.g `RegionalParliament`.
+## Naming
+### Files
+Maps in [assets/maps](assets/maps) should be named `[Country]_[type-(YEAR)]_(HYP)`, the `year` being the last time the map was used in an election. E.g `Germany_Wahlkreise-2021` for a real life map or `Adoria_NationalAssembly_HYP` for a hypothetical map, all fictional countries count as hypothetical. The `[type]` must be written as one word, even if the proper name is two separate words e.g `RegionalParliament`.
 
-Function arguments are kept short as one or two letter words, here is a list of a few and their corresping meaning. The arguments aren't always used appropriate to their precise technical definition, rather they are used as a way to make code more organised and intuitive.
+### Functions
+Function parameters are kept as consistent as possible, here are few of one/two letter parameters which are used throughout the script.
 
-* e => element
-* n => given number or string
-* m => map
-* d => data
-* i => index
-* p => path
-* fc => feature collection
-* wd, ht, ln => width, height, length
+- `c` container, root element of subject
+- `e` element, element within a container
+- `n` given number or string
+- `m` map
+- `d` data, used primarily in d3 async functions
+- `i` index, for looping
+- `fc` feature collection, collection of features or nodes
+- `wd, ht, ln` width, height, length
+
+### Styling
+
+BEM naming convention is used, more info [here](https://cssguidelin.es/#bem-like-naming).
 
 
 ## Other Notes
-All maps in [assets/maps/geojson](assets/maps/geojson) must be topojson GeoJSON files. Use [mapshaper](https://mapshaper.org/) to convert to topojson.
+All maps in [assets/maps/geojson](assets/maps/geojson) must be topojson GeoJSON files. Use [mapshaper](https://mapshaper.org/) to convert between filetypes.
 
 
 The feature collection of all topojson files must be named `boundaries` so it can be parsed by the fetching functions.
 ```js
-//this function parses a topojson file and transforms it into a vector graphic
-let map = e.selectAll("path")
-    .data(topojson.feature(data, data.objects.boundaries).features) //here is the important part, look at keyword ".boundaries"
-    .enter().append("path")
-        .attr("d", path);
+// This parses a topojson file and transforms it into a vector graphic
+const data = await d3.json(n);
+const collection = topojson.feature(data, data.objects.boundaries);
 ```
 
 
-An extensive guide to GIS and vector graphics as well as the use of bounding boxes and coordinate systems cis provided in [documentation](DOCUMENTATION.md).
+An extensive guide to GIS and vector graphics as well as the use of bounding boxes and coordinate systems is provided in [documentation](DOCUMENTATION.md).

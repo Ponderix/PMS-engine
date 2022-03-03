@@ -1,5 +1,30 @@
+html {
+    height: 100%;
+    width: 100%;
+}
+
 body {
     margin: 0;
     font-family: courier;
     overflow-x: hidden;
+    overflow-y: hidden;
+    font-size: 2vh;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+}
+    .main-interactive {
+        margin: auto;
+        width: 95%;
+        height: 85%;
+    }
+    .footer {
+        height: 15%;
+    }
+
+@media (min-width: 650px) {
+    body {
+        overflow-y: visible;
+    }
 }

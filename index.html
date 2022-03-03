@@ -4,22 +4,22 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="keywords" content="Elections, Election Map, Politics">
-        <meta name="description" content="PMS-Engine website. View and edit election maps.">
+        <meta name="description" content="PMS-engine website. View and edit election maps.">
 
-        <meta property="og:title" content="PMS-Engine" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ponderix.github.io/PMS-engine/" />
-        <meta property="og:image" content="https://ponderix.github.io/PMS-engine/assets/img/og_preview.png" />
-        <meta property="og:description" content="PMS-Engine website. View and edit election maps." />
+        <meta property="og:title" content="PMS-engine"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:url" content="https://ponderix.github.io/PMS-engine/"/>
+        <meta property="og:image" content="https://ponderix.github.io/PMS-engine/assets/img/og_preview.png"/>
+        <meta property="og:description" content="PMS-Engine website. View and edit election maps."/>
         <meta name="theme-color" content="#4488bb"/>
 
         <meta name="twitter:card" content="summary_large_image"/>
-        <meta name="twitter:site" content="@ponderix" />
-        <meta name="twitter:title" content="PMS-Engine" />
-        <meta name="twitter:description" content="PMS-Engine website. View and edit election maps." />
-        <meta name="twitter:image" content="https://ponderix.github.io/PMS-engine/assets/img/og_preview.png" />
+        <meta name="twitter:site" content="@ponderix"/>
+        <meta name="twitter:title" content="PMS-engine"/>
+        <meta name="twitter:description" content="PMS-engine website. View and edit election maps."/>
+        <meta name="twitter:image" content="https://ponderix.github.io/PMS-engine/assets/img/og_preview.png"/>
 
-        <title>PMS-Engine</title>
+        <title>PMS-engine</title>
         <link rel="icon" type="image/png" href="assets/img/favicon-32x32.png">
 
         <!-- libs -->
@@ -28,35 +28,76 @@
         <script type="text/javascript" src="libs/d3.min.js" charset="utf-8"></script>
         <script type="text/javascript" src="libs/topojson.min.js" charset="utf-8"></script>
 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
         <!-- style sheets -->
-        <link rel="stylesheet" href="style/map.css">
-        <link rel="stylesheet" href="style/menu.css">
-        <link rel="stylesheet" href="style/index.css">
+        <link rel="stylesheet" href="style/map.css"/>
+        <link rel="stylesheet" href="style/menu.css"/>
+        <link rel="stylesheet" href="style/footer.css"/>
+
+        <link rel="stylesheet" href="style/index.css"/>
 
         <!-- script -->
         <script type="module" src="script/map/dict.js" charset="utf-8"></script>
         <script type="module" src="script/map/fetch.js" charset="utf-8"></script>
-        <script type="module" src="script/map/interactive.js" charset="utf-8"></script>
+        <script type="module" src="script/map/propagate.js" charset="utf-8"></script>
         <script type="module" src="script/map/draw.js" charset="utf-8"></script>
+        <script type="module" src="script/map/fill.js" charset="utf-8"></script>
+
+        <script type="module" src="script/formatting/menu.js" charset="utf-8"></script>
 
         <script type="module" src="script/init.js" charset="utf-8"></script>
     </head>
 
     <body>
-        <!-- courtesy of www.w3schools.com -->
-        <div class="menu-button">
-            <div class="menu-button__line menu-button__line1"></div>
-            <div class="menu-button__line menu-button__line2"></div>
-            <div class="menu-button__line menu-button__line3"></div>
+
+        <div class="main-interactive">
+            <!-- courtesy of www.w3schools.com -->
+            <div class="menu">
+                <div class="menu__button">
+                    <div class="menu__line menu__line--1"></div>
+                    <div class="menu__line menu__line--2"></div>
+                    <div class="menu__line menu__line--3"></div>
+                </div>
+
+                <div class="menu__body">
+                    <div class="menu__list"></div>
+                </div>
+            </div>
+
+            <div class="map">
+                <div class="map__header">
+                    <div class="map__title"></div>
+
+                    <div class="map__paint">
+                        <i class="fa fa-paint-brush" style="color: white"></i>
+                        <input class="map__colour-input" type="color" value="#646464">
+                    </div>
+                </div>
+
+                <div class="map__container"></div>
+            </div>
         </div>
 
-        <div class="menu-body">
-            <div class="menu__list"></div>
+        <div class="footer">
+            <div class="footer__resources">
+                <a class="resources__link" href="https://github.com/Ponderix/PMS-engine" target="_blank">
+                    <p class="footer__p resources__github">GITHUB</p>
+                </a>
+                <a class="resources__link" href="https://discord.gg/Pz8nP8br64" target="_blank">
+                    <p class="footer__p resources__discord">DISCORD</p>
+                </a>
+                <a class="resources__link" href="https://twitter.com/ponderix" target="_blank">
+                    <p class="footer__p resources__twitter">TWITTER</p>
+                </a>
+            </div>
+            <!-- static as of yet !MAKE DYNAMIC! -->
+            <div class="footer__copyright">
+                <p class="footer__p copyright__text">&copy 2021-2022 Ponderix</p>
+                <p class="footer__p copyright__license">Code licensed under the <a class="copyright__link" href="https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html" target="_blank">General Public License v2</a></p>
+                <p class="footer__p copyright__version">Version N/A</p>
+            </div>
         </div>
 
-        <div class="map">
-            <div class="map__title"></div>
-            <div class="map__container"></div>
-        </div>
     </body>
 </html>

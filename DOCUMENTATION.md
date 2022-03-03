@@ -1,7 +1,6 @@
 # Documentation
 Documentation regarding various topics such as the engine code, use of libraries and technical concepts. Useful for those who wish to use their own custom election maps.
-* [Uploading Custom Maps (NOT FUNCTIONAL YET)](#custom)
-    - [DISCLAIMER!](#disclaimer)
+* [Uploading Custom Maps](#custom)
     - [Instructions](#instructions)
     - [Troubleshooting TopoJSON maps](#troubleshooting)
 * [Map Types](#map)
@@ -13,11 +12,14 @@ Documentation regarding various topics such as the engine code, use of libraries
     - [Uses](#uses)
 
 
-## Uploading Custom Maps (NOT FUNCTIONAL YET) <a name="custom"></a>
-### DISCLAIMER! <a name="disclaimer"></a>
-
-
-To upload your own maps you will need to host the website yourself, preferably on a localhost. Please take the [terms and conditions](LICENSE) into consideration when doing this.
+## Uploading Custom Maps<a name="custom"></a>
+<p align="center">
+    <br>
+    <strong>DISCLAIMER<strong>
+    <br>
+    To upload your own maps you will need to host the website yourself, preferably on a localhost. Please take the term and conditions into consideration when doing this.
+    <br>
+</p>
 
 ### Instructions <a name="instructions"></a>
 For this to work you will need either SVG or topojson maps. They have to be as simple as possible without any additional texts or images on them. It should only the electoral districts and nothing else. Note that the main object on the topojson maps has to be named `boundaries`.

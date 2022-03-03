@@ -1,26 +1,55 @@
 .map {
-    margin: auto;
-    width: 95vw;
-    height: 90vh;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+}
+.map__header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    margin-bottom: 0.5em;
 }
 
-    .map__title {
-        font-size: 2vw;
-        padding: 1vw;
+    .map__paint--selected {
+        transform: scale(1.05) translate(0.2em, 0.05em);
+        border: #227d9d 0.25em solid;
     }
+    .map__paint {
+        background-color: #2596be;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 0.5em;
+        width: 7em;
+        height: 1em;
+        border-radius: 0.25em;
+        cursor: pointer;
+        transition: 0.5s;
+    }
+        .map__colour-input {
+            border: none;
+            padding: 0;
+            height: 90%;
+        }
+        .map__colour-input:hover {border: 0.25em white solid;}
+
+    .map__title {}
         .map__title-main {
             font-weight: bold;
+            font-size: 1.5em;
+            font-family: monospace;
         }
         .map__title-copyright {
-            font-size: 0.5em;
+            font-size: 0.75em;
+            margin: 0.5em 0 0;
         }
 
     .map__container {
-        width: 100%;
-        height: 100%
+        flex-grow: 1;
     }
         .map__path {
             stroke: white;
-            stroke-width: 0.3px;
+            stroke-width: 0.25px;
             fill: #646464;
+            transition: 0.15s;
         }
