@@ -26,7 +26,7 @@ const dict = {};
         copyright : "© Ponderix 2019,<br/>election map for the Adoria political simulation."
     };
     dict["hungary"] = {
-        path : "./assets/maps/svg/Hungary_NationalAssembly-2014.svg",
+        path : "./assets/maps/svg/Hungary_NationalAssembly-2018.svg",
         title : "Hungarian National Assembly",
         copyright : "© Erinthecute 2021<br/>(CC BY-SA 4.0)"
     };
