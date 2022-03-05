@@ -21,6 +21,7 @@ body {
     }
     .footer {
         height: 15%;
+        background-color: #808080;
     }
 
 @media (min-width: 650px) {

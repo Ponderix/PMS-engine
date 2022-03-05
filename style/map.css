@@ -6,8 +6,11 @@
 .map__header {
     display: flex;
     flex-direction: column;
+    background-color: #808080;
     gap: 0.5em;
     margin-bottom: 0.5em;
+    color: #d3d3d3;
+    box-shadow: 10px 10px 5px #C9C9C9;
 }
 
     .map__paint--selected {
@@ -15,11 +18,13 @@
         border: #227d9d 0.25em solid;
     }
     .map__paint {
-        background-color: #2596be;
+        border-color: #d3d3d3;
+        background-color: #808080;
         display: flex;
         align-items: center;
         justify-content: space-around;
         padding: 0.5em;
+        margin: 0.5em;
         width: 7em;
         height: 1em;
         border-radius: 0.25em;
@@ -31,17 +36,18 @@
             padding: 0;
             height: 90%;
         }
-        .map__colour-input:hover {border: 0.25em white solid;}
+        .map__colour-input:hover {border: 0.05em #d3d3d3 solid;}
 
     .map__title {}
         .map__title-main {
             font-weight: bold;
             font-size: 1.5em;
             font-family: monospace;
+            margin: 0.25em;
         }
         .map__title-copyright {
             font-size: 0.75em;
-            margin: 0.5em 0 0;
+            margin: 0.5em;
         }
 
     .map__container {

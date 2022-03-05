@@ -1,16 +1,19 @@
 .menu {
     height: 10%;
-}
+    background-color: #808080;
+    box-shadow: 10px 10px 5px #C9C9C9;
+  }
 
 .menu__button {
     cursor: pointer;
     display: inline-block;
     margin-top: 1em;
+    margin-left: 0.5em;
 }
         .menu__line {
             width: 1.75em;
             height: 0.25em;
-            background-color: #2596be;
+            background-color: #d3d3d3;
             margin: 0.45em 0;
             transition: 0.7s;
         }
