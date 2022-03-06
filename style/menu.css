@@ -28,8 +28,6 @@
         width: 75%;
         display: flex;
         flex-wrap: wrap;
-        justify-content: flex-start;
-        align-content: space-around;
         gap: 0.5em;
         overflow: scroll;
     }
