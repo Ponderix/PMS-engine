@@ -22,7 +22,7 @@
 
 .menu__body {
     position: absolute;
-    top: 12em;
+    top: 13em;
 }
     .menu__list {
         width: 75%;
@@ -31,14 +31,16 @@
         justify-content: flex-start;
         align-content: space-around;
         gap: 0.5em;
+        overflow: scroll;
     }
         .list__item {
             padding: 1.25em;
             text-align: center;
-            background-color: white;
-            border: 0.15em solid black;
+            background-color: #808080;
+            box-shadow: 5px 5px 5px #C9C9C9;
+            border: None;
             cursor: pointer;
-            color: black;
+            color: #d3d3d3;
             font-size: 0.75em;
         }
         .list__item:hover {background-color: black; color: white; transition: 0.25s;}
@@ -46,9 +48,21 @@
 
 @media (min-width: 650px) {
     .menu__list {
-        width: 50%;
+        width: 25%;
+        height: 28em;
     }
         .list__item {
             font-size: 1em;
         }
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.menu__list::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.menu__list {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
