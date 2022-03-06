@@ -10,7 +10,6 @@
     gap: 0.5em;
     margin-bottom: 0.5em;
     color: #d3d3d3;
-    box-shadow: 10px 10px 5px #C9C9C9;
 }
 
     .map__paint--selected {
@@ -19,7 +18,7 @@
     }
     .map__paint {
         border-color: #d3d3d3;
-        background-color: #808080;
+        background-color: #d3d3d3;
         display: flex;
         align-items: center;
         justify-content: space-around;
@@ -32,14 +31,15 @@
         transition: 0.5s;
     }
     .map__paint:hover {
-      transform: scale(1.05) translate(0.2em, 0.05em);
-      background-color: #d3d3d3;
+      transform: scale(1.025) translate(0.1em, 0.025em);
     }
         .map__colour-input {
             padding: 0;
             height: 90%;
+            border: #d3d3d3;
+            background-color: #d3d3d3;
         }
-        .map__colour-input:hover {border: 0.05em #d3d3d3 solid;}
+        .map__colour-input:hover {box-shadow: 0.1px 0.1px 1px;}
 
     .map__title {}
         .map__title-main {
