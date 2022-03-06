@@ -24,6 +24,7 @@
         justify-content: space-around;
         padding: 0.5em;
         margin: 0.5em;
+        margin-left: 1.75em;
         width: 7em;
         height: 1em;
         border-radius: 0.25em;
@@ -42,7 +43,9 @@
         }
         .map__colour-input:hover {box-shadow: 0.1px 0.1px 1px;}
 
-    .map__title {}
+    .map__title {
+      margin-left: 1.75em;
+    }
         .map__title-main {
             font-weight: bold;
             font-size: 1.5em;

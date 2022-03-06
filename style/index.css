@@ -20,7 +20,7 @@ header {
 }
     .main-interactive {
         margin: auto;
-        width: 95%;
+        margin-left: 1.75em; 
         height: 85%;
     }
     .footer {
