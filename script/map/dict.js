@@ -84,4 +84,11 @@ const dict = {};
         country: "US",
         type: "Historical"
     };
+    dict["ScotlandParliament"] = {
+        path : "./assets/maps/svg/Scotland_Parliament-2021.svg",
+        title : "Scottish Parliament",
+        copyright : "By DrRandomFactor, derivative of Barryob, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=102031357",
+        country: "UK",
+        type: "State"
+    };
 export {dict};

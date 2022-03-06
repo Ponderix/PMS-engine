@@ -15,7 +15,7 @@
 
     .map__paint--selected {
         transform: scale(1.05) translate(0.2em, 0.05em);
-        border: #227d9d 0.25em solid;
+        background-color: #d3d3d3;
     }
     .map__paint {
         border-color: #d3d3d3;
@@ -30,6 +30,10 @@
         border-radius: 0.25em;
         cursor: pointer;
         transition: 0.5s;
+    }
+    .map__paint:hover {
+      transform: scale(1.05) translate(0.2em, 0.05em);
+      background-color: #d3d3d3;
     }
         .map__colour-input {
             padding: 0;

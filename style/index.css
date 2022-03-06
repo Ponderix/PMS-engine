@@ -14,6 +14,10 @@ body {
     display: flex;
     flex-flow: column;
 }
+header {
+  background-color: #808080;
+  box-shadow: -1px 5px #C9C9C9;
+}
     .main-interactive {
         margin: auto;
         width: 95%;
