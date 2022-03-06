@@ -40,4 +40,24 @@ const dict = {};
         title : "Czech Republic Senate",
         copyright : "© Jindra Lacko 2018"
     };
+    dict["UK1997"] = {
+        path : "./assets/maps/svg/UK_HouseOfCommons-1997.svg",
+        title : "UK House of Commons (1997)",
+        copyright : ""
+    };
+    dict["2022US"] = {
+        path : "./assets/maps/svg/US_HOR-2022.svg",
+        title : "United States 2022 HOR Election",
+        copyright : "By Ketrit - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=115019184"
+    };
+    dict["Ukraine"] = {
+        path : "./assets/maps/svg/Ukraine_Rada-2019.svg",
+        title : "Ukraine",
+        copyright : "By Tohaomg - Own work (based on data from the website of State voters register), CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=77631482"
+    };
+    dict["2012US"] = {
+        path : "./assets/maps/svg/US_HOR-2012.svg",
+        title : "United States 2012 HOR Election",
+        copyright : "By Mr. Matté - File:113th U.S. Congress House districts alternate.svg, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=22588251"
+    };
 export {dict};
