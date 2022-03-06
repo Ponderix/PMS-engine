@@ -31,7 +31,8 @@
         transition: 0.5s;
     }
     .map__paint:hover {
-      transform: scale(1.025) translate(0.1em, 0.025em);
+      transform: scale(1.05) translate(0.2em, 0.05em);
+      box-shadow: 3px 5px black;
     }
         .map__colour-input {
             padding: 0;

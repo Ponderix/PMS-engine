@@ -16,7 +16,7 @@ body {
 }
 header {
   background-color: #808080;
-  box-shadow: -1px 5px #C9C9C9;
+  box-shadow: 5px 5px #C9C9C9;
 }
     .main-interactive {
         margin: auto;
