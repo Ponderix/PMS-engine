@@ -15,7 +15,7 @@ Documentation regarding various topics such as the engine code, use of libraries
 ## Uploading Custom Maps<a name="custom"></a>
 <p align="center">
     <br>
-    <strong>DISCLAIMER<strong>
+    <strong>DISCLAIMER</strong>
     <br>
     To upload your own maps you will need to host the website yourself, preferably on a localhost. Please take the term and conditions into consideration when doing this.
     <br>
