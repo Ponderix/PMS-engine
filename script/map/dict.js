@@ -19,6 +19,11 @@ const dict = {};
         title : "England 2023 Proposals",
         copyright : "© Crown copyright and database rights<br/>2021 OS 100018289"
     };
+    dict["czechia"] = {
+        path : "./assets/maps/geojson/Czechia_Senate-2020.json",
+        title : "Czech Republic Senate",
+        copyright : "© Jindra Lacko 2018"
+    };
 
     dict["adoria"] = {
         path : "./assets/maps/svg/Adoria_NationalAssembly_HYP.svg",
@@ -35,9 +40,19 @@ const dict = {};
         title : "Germany (hypothetical) 598 Seats",
         copyright : "© Ponderix 2021<br/>(CC BY-SA 4.0)"
     };
-    dict["czechia"] = {
-        path : "./assets/maps/geojson/Czechia_Senate-2020.json",
-        title : "Czech Republic Senate",
-        copyright : "© Jindra Lacko 2018"
+    dict["HOR2020"] = {
+        path : "./assets/maps/svg/USA_HOR-2020.svg",
+        title : "US House 2012-2020",
+        copyright : "© Mr. Matté - File (CC BY-SA 3.0)<br>https://commons.wikimedia.org/w/index.php?curid=22588251"
+    };
+    dict["scotland2021"] = {
+        path : "./assets/maps/svg/UK_ScottishParliament-2021.svg",
+        title : "Scottish Parliament",
+        copyright : "© DrRandomFactor derivative of © Barryob<br>(CC BY-SA 4.0) https://commons.wikimedia.org/w/index.php?curid=102031357"
+    };
+    dict["ukraine2019"] = {
+        path : "./assets/maps/svg/Ukraine_Rada-2019.svg",
+        title : "Ukranian Rada Constituencies 2019",
+        copyright : "© Tohaomg using data provided by the Central Election Commision Ukraine<br>(CC BY-SA 4.0)"
     };
 export {dict};
