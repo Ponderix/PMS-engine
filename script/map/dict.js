@@ -41,8 +41,8 @@ const dict = {};
         copyright : "© Ponderix 2021<br/>(CC BY-SA 4.0)"
     };
     dict["HOR2020"] = {
-        path : "./assets/maps/svg/USA_HOR-2020.svg",
-        title : "US House 2012-2020",
+        path : "./assets/maps/svg/USA_HOR-2014.svg",
+        title : "US House 2012-2014",
         copyright : "© Mr. Matté - File (CC BY-SA 3.0)<br>https://commons.wikimedia.org/w/index.php?curid=22588251"
     };
     dict["scotland2021"] = {
@@ -52,7 +52,7 @@ const dict = {};
     };
     dict["ukraine2019"] = {
         path : "./assets/maps/svg/Ukraine_Rada-2019.svg",
-        title : "Ukranian Rada Constituencies 2019",
+        title : "Ukranian Rada Electoral Districts",
         copyright : "© Tohaomg using data provided by the Central Election Commision Ukraine<br>(CC BY-SA 4.0)"
     };
 export {dict};
